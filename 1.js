@@ -1,0 +1,8 @@
+function sum(a,b) {
+            return a+b;
+        }
+
+        let a = parseInt(prompt("Введите число a:"));
+        let b = parseInt(prompt("Введите число b:"));
+        let name = "qwerty";
+        alert(`Result: ${a + b}`);
