@@ -7,50 +7,8 @@
 
 <body>
 
-    <script lang="JavaScript">
-        let flag = false;
-        function drinkOffer(){
-            let choice = confirm("Дима, выпьем сегодня?");
-            if (choice){
-                alert("Отлично!");
-                return flag = true;
-            } else {
-                let choiceTwo = confirm("А может все-таки выпьем?");
-                if (choiceTwo) {
-                    alert("Ну вот, совсем другое дело!!!");
-                    return flag = true;
-                } else {
-                    alert("Нет, так нет, мне больше достанется!");
-                }
-            }
-        }
-        function howMuch(){
-            let choice = parseInt(prompt("Сколько возьмем?", "грамм"));
-            if (choice == 0) {
-                alert("Че ты несешь, я же просил в граммах!");
-                return howMuch();
-            } else {
-                if (choice <= 150) {
-                    alert("Как-то слабовато!");
-                    return howMuch();
-                } else {
-                    if (choice > 150 && choice <= 500) {
-                        alert("Ну ОК!");
-                        return chioce;
-                    } else {
-                        if (choice > 500) {
-                            alert("Совсем другое дело");
-                            return choice;
-                        }
-                        
-                }
-            }
-        }}
+    <script type="text/javascript", src="alkobot.js">
         
-        drinkOffer();
-        if (flag) {
-            howMuch();
-        }
 
 
     </script>
