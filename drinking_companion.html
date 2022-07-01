@@ -73,12 +73,13 @@
             if (flag) {
                 let ammount = howMuch();
                 alert("Понеслась!!!")
-                let a = Math.floor(ammount/50);
+                let a = Math.floor(ammount/100);
                 for ( i = a; i > 0; i--) {
-                    let rand = Math.floor(Math.random()*10);
+                    let rand = Math.floor(Math.random()*12);
                     alert(`Предлагаю тост!\n${toasts[rand]}\n\nЕще по одной!?`);
             }
-            let offer = confirm("Закончилось...жаль...(((\nА может сходим за ещем?!");
+            alert("Закончилось, жаль....(((");
+            let offer = confirm("А может сходим за ещем?!");
             if (offer) {
                 alert("Я знал, что ты не сможешь устоять!!!!!!!");
                 return drinkingProcess(flag);
