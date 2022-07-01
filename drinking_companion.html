@@ -20,11 +20,12 @@
                 'Поднимем бокалы за то, чтобы Света светила, Катя катила, Люба любила и Даша. просто молодец!',
                 'Всегда нужно пить за друзей, с друзьями, в дружной компании. Просто потому, что без Вас, друзья, не было бы таких застольев!',
                 'За мир и согласие, а кто не согласен, тот не с нами.'
-                ];
+            ];
         let flag = false;
 
         function drinkOffer(){
-            let choice = confirm("Дима, выпьем сегодня?");
+            let username = prompt("Приветик!Как тебя зовут?", "Имя");
+            let choice = confirm(`${username}, выпьем сегодня?`);
             if (choice){
                 alert("Отлично!");
                 return flag = true;
@@ -52,12 +53,13 @@
                         alert("Маловато,но пойдет...");
                         return choice;
                     } else {
-                        if (choice > 500 & choice < 1000) {
+                        if (choice > 500 & choice <= 1000) {
                             alert("Не плохо!!!");
                             return choice;
                         } else {
-                            if (choice >= 1000) {
-                                alert("Ну ты мужик!!!!!!!");
+                            if (choice > 1000) {
+                                alert("Ну ты c яйцами!!!!!!!\nЯ столько не выпью!");
+                                return howMuch();
                             }
                         }
                         
@@ -70,15 +72,15 @@
         function drinkingProcess(flag) {
             if (flag) {
                 let ammount = howMuch();
-                alert("Ну понеслась!!!")
+                alert("Понеслась!!!")
                 let a = Math.floor(ammount/50);
                 for ( i = a; i > 0; i--) {
-                    let rand = Math.floor(Math.random()*12);
+                    let rand = Math.floor(Math.random()*10);
                     alert(`Предлагаю тост!\n${toasts[rand]}\n\nЕще по одной!?`);
             }
             let offer = confirm("Закончилось...жаль...(((\nА может сходим за ещем?!");
             if (offer) {
-                alert("Я знал, что ты мужик!!!!!!!");
+                alert("Я знал, что ты не сможешь устоять!!!!!!!");
                 return drinkingProcess(flag);
             } else {
                 alert("Слабак, пойду лопать без тебя!");
